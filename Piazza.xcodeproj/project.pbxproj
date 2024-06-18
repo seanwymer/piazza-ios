@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		77EC0D7D2C1B5ED1002FCB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */; };
 		77EC0D7F2C1B5ED1002FCB4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D7E2C1B5ED1002FCB4F /* SceneDelegate.swift */; };
-		77EC0D812C1B5ED1002FCB4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D802C1B5ED1002FCB4F /* ViewController.swift */; };
-		77EC0D842C1B5ED1002FCB4F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77EC0D832C1B5ED1002FCB4F /* Base */; };
 		77EC0D862C1B5ED2002FCB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EC0D852C1B5ED2002FCB4F /* Assets.xcassets */; };
 		77EC0D892C1B5ED2002FCB4F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77EC0D882C1B5ED2002FCB4F /* Base */; };
 		77EC0D942C1B5ED2002FCB4F /* PiazzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D932C1B5ED2002FCB4F /* PiazzaTests.swift */; };
@@ -39,8 +37,6 @@
 		77EC0D792C1B5ED1002FCB4F /* Piazza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piazza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EC0D7E2C1B5ED1002FCB4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77EC0D802C1B5ED1002FCB4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		77EC0D832C1B5ED1002FCB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77EC0D852C1B5ED2002FCB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77EC0D882C1B5ED2002FCB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77EC0D8A2C1B5ED2002FCB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +97,6 @@
 			children = (
 				77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */,
 				77EC0D7E2C1B5ED1002FCB4F /* SceneDelegate.swift */,
-				77EC0D802C1B5ED1002FCB4F /* ViewController.swift */,
-				77EC0D822C1B5ED1002FCB4F /* Main.storyboard */,
 				77EC0D852C1B5ED2002FCB4F /* Assets.xcassets */,
 				77EC0D872C1B5ED2002FCB4F /* LaunchScreen.storyboard */,
 				77EC0D8A2C1B5ED2002FCB4F /* Info.plist */,
@@ -237,7 +231,6 @@
 			files = (
 				77EC0D862C1B5ED2002FCB4F /* Assets.xcassets in Resources */,
 				77EC0D892C1B5ED2002FCB4F /* Base in Resources */,
-				77EC0D842C1B5ED1002FCB4F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "INFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nPLISTBUDDY=\"/usr/libexec/PlistBuddy\"\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n  $PLISTBUDDY -c \"Add :NSAppTransportSecurity dict\" \"${INFO_PLIST}\"\n|| true\n  $PLISTBUDDY -c \"Add\n:NSAppTransportSecurity:NSAllowsArbitraryLoads bool true\" \"\n${INFO_PLIST}\" || true\n  $PLISTBUDDY -c \"Set\n:NSAppTransportSecurity:NSAllowsArbitraryLoads true\" \"${INFO_PLIST}\"\nelse\n  $PLISTBUDDY -c \"Delete\n:NSAppTransportSecurity:NSAllowsArbitraryLoads\" \"${INFO_PLIST}\" ||\ntrue\nfi\nALLOWS_ARBITRARY_LOADS_ENABLED=$($PLISTBUDDY -c \"Print\n:NSAppTransportSecurity:NSAllowsArbitraryLoads\" \"${INFO_PLIST}\")\nif [ \"${ALLOWS_ARBITRARY_LOADS_ENABLED}\" == \"true\" ]; then\n  echo \"warning: ATS is disabled.\n:NSAppTransportSecurity:NSAllowsArbitraryLoads set to true. This is\ninsecure and should not be used in release builds.\"\nfi\n";
+			shellScript = "INFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nPLISTBUDDY=\"/usr/libexec/PlistBuddy\"\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n    $PLISTBUDDY -c \"Add :NSAppTransportSecurity dict\" \"${INFO_PLIST}\" || true\n    $PLISTBUDDY -c \"Add :NSAppTransportSecurity:NSAllowsArbitraryLoads bool true\" \"${INFO_PLIST}\" || true\n    $PLISTBUDDY -c \"Set :NSAppTransportSecurity:NSAllowsArbitraryLoads true\" \"${INFO_PLIST}\"\nelse\n    $PLISTBUDDY -c \"Delete :NSAppTransportSecurity:NSAllowsArbitraryLoads\" \"${INFO_PLIST}\" || true\nfi\n\nALLOWS_ARBITRARY_LOADS_ENABLED=$($PLISTBUDDY -c \"Print :NSAppTransportSecurity:NSAllowsArbitraryLoads\" \"${INFO_PLIST}\")\nif [ \"${ALLOWS_ARBITRARY_LOADS_ENABLED}\" == \"true\" ]; then\n  echo \"warning: ATS is disabled. :NSAppTransportSecurity:NSAllowsArbitraryLoads set to true. This is insecure and should not be used in release builds.\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -282,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EC0D812C1B5ED1002FCB4F /* ViewController.swift in Sources */,
 				77EC0D7D2C1B5ED1002FCB4F /* AppDelegate.swift in Sources */,
 				77EC0D7F2C1B5ED1002FCB4F /* SceneDelegate.swift in Sources */,
 			);
@@ -321,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		77EC0D822C1B5ED1002FCB4F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77EC0D832C1B5ED1002FCB4F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		77EC0D872C1B5ED2002FCB4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -470,7 +454,7 @@
 				INFOPLIST_FILE = Piazza/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,7 +481,7 @@
 				INFOPLIST_FILE = Piazza/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
