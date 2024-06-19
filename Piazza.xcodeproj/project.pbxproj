@@ -28,6 +28,7 @@
 		77EC0DCA2C23462F002FCB4F /* Strada in Frameworks */ = {isa = PBXBuildFile; productRef = 77EC0DC92C23462F002FCB4F /* Strada */; };
 		77EC0DCC2C2346F5002FCB4F /* BridgeComponent+Piazza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */; };
 		77EC0DCE2C23473B002FCB4F /* NavMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */; };
+		77EC0DD12C235BB8002FCB4F /* LoginButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DD02C235BB8002FCB4F /* LoginButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		77EC0DC62C23389F002FCB4F /* PathDirectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDirectable.swift; sourceTree = "<group>"; };
 		77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeComponent+Piazza.swift"; sourceTree = "<group>"; };
 		77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavMenuComponent.swift; sourceTree = "<group>"; };
+		77EC0DD02C235BB8002FCB4F /* LoginButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +126,10 @@
 		77EC0D7B2C1B5ED1002FCB4F /* Piazza */ = {
 			isa = PBXGroup;
 			children = (
+				77EC0DCF2C235B46002FCB4F /* Bridge */,
 				77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */,
 				77EC0DB72C224F55002FCB4F /* RoutingController.swift */,
 				77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */,
-				77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */,
 				77EC0DC62C23389F002FCB4F /* PathDirectable.swift */,
 				77EC0DC22C232A7C002FCB4F /* WebViewController.swift */,
 				77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */,
@@ -167,6 +169,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77EC0DCF2C235B46002FCB4F /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */,
+				77EC0DD02C235BB8002FCB4F /* LoginButtonComponent.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				77EC0DB12C2234B9002FCB4F /* RootViewController.swift in Sources */,
 				77EC0D7F2C1B5ED1002FCB4F /* SceneDelegate.swift in Sources */,
 				77EC0DBE2C2250D2002FCB4F /* Global.swift in Sources */,
+				77EC0DD12C235BB8002FCB4F /* LoginButtonComponent.swift in Sources */,
 				77EC0DCE2C23473B002FCB4F /* NavMenuComponent.swift in Sources */,
 				77EC0DC32C232A7C002FCB4F /* WebViewController.swift in Sources */,
 			);
