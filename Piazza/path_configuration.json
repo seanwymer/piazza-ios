@@ -8,6 +8,15 @@
             "properties": {
                 "presentation": "modal"
             }
+        },
+        {
+            "patterns": [
+                "/$",
+                "/profile$"
+            ],
+            "properties": {
+                "presentation": "replace"
+            }
         }
     ]
 }

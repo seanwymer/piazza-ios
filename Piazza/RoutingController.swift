@@ -9,6 +9,7 @@ import UIKit
 import Turbo
 import SafariServices
 import WebKit
+import Strada
 
 class RoutingController:
     BaseNavigationController, PathDirectable {
@@ -27,13 +28,17 @@ class RoutingController:
     }()
     
     private static func createSession() -> Session {
+        let stradaSubstring =
+        Strada.userAgentSubstring(for: BridgeComponent.allTypes)
+        let userAgent = "Piazza Turbo Native iOS \(stradaSubstring)"
+        
         let configuration = WKWebViewConfiguration()
-        configuration.applicationNameForUserAgent =
-            "Piazza Turbo Native iOS"
+        configuration.applicationNameForUserAgent = userAgent
         configuration.processPool = sharedProcessPool
         
         let session = Session(webViewConfiguration: configuration)
         session.pathConfiguration = Global.pathConfiguration
+        Bridge.initialize(session.webView)
         
         return session
     }
@@ -55,6 +60,19 @@ extension RoutingController: SessionDelegate {
                  didProposeVisit proposal: VisitProposal) {
         if proposal.isPathDirective {
             executePathDirective(proposal)
+        } else if let tabIndex =
+                    RootViewController.tabIndexForURL(proposal.url) {
+            
+            let rootViewController =
+            self.tabBarController as? RootViewController
+            
+            if let presentedVC = presentedViewController {
+                presentedVC.dismiss(animated: true, completion: {
+                    rootViewController?.switchToTab(tabIndex)
+                })
+            } else {
+                rootViewController?.switchToTab(tabIndex)
+            }
         } else {
             visit(proposal)
         }

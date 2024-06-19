@@ -25,6 +25,9 @@
 		77EC0DC32C232A7C002FCB4F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC22C232A7C002FCB4F /* WebViewController.swift */; };
 		77EC0DC52C232B56002FCB4F /* ViewControllerVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */; };
 		77EC0DC72C23389F002FCB4F /* PathDirectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC62C23389F002FCB4F /* PathDirectable.swift */; };
+		77EC0DCA2C23462F002FCB4F /* Strada in Frameworks */ = {isa = PBXBuildFile; productRef = 77EC0DC92C23462F002FCB4F /* Strada */; };
+		77EC0DCC2C2346F5002FCB4F /* BridgeComponent+Piazza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */; };
+		77EC0DCE2C23473B002FCB4F /* NavMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		77EC0DC22C232A7C002FCB4F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVendor.swift; sourceTree = "<group>"; };
 		77EC0DC62C23389F002FCB4F /* PathDirectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDirectable.swift; sourceTree = "<group>"; };
+		77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeComponent+Piazza.swift"; sourceTree = "<group>"; };
+		77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavMenuComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77EC0DC12C225593002FCB4F /* Turbo in Frameworks */,
+				77EC0DCA2C23462F002FCB4F /* Strada in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,8 @@
 			children = (
 				77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */,
 				77EC0DB72C224F55002FCB4F /* RoutingController.swift */,
+				77EC0DCB2C2346F5002FCB4F /* BridgeComponent+Piazza.swift */,
+				77EC0DCD2C23473B002FCB4F /* NavMenuComponent.swift */,
 				77EC0DC62C23389F002FCB4F /* PathDirectable.swift */,
 				77EC0DC22C232A7C002FCB4F /* WebViewController.swift */,
 				77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */,
@@ -180,6 +188,7 @@
 			name = Piazza;
 			packageProductDependencies = (
 				77EC0DC02C225593002FCB4F /* Turbo */,
+				77EC0DC92C23462F002FCB4F /* Strada */,
 			);
 			productName = Piazza;
 			productReference = 77EC0D792C1B5ED1002FCB4F /* Piazza.app */;
@@ -255,6 +264,7 @@
 			mainGroup = 77EC0D702C1B5ED1002FCB4F;
 			packageReferences = (
 				77EC0DAC2C1B5FD0002FCB4F /* XCRemoteSwiftPackageReference "turbo-ios" */,
+				77EC0DC82C23462F002FCB4F /* XCRemoteSwiftPackageReference "strada-ios" */,
 			);
 			productRefGroup = 77EC0D7A2C1B5ED1002FCB4F /* Products */;
 			projectDirPath = "";
@@ -322,6 +332,7 @@
 			files = (
 				77EC0DAF2C2233C4002FCB4F /* Api.swift in Sources */,
 				77EC0D7D2C1B5ED1002FCB4F /* AppDelegate.swift in Sources */,
+				77EC0DCC2C2346F5002FCB4F /* BridgeComponent+Piazza.swift in Sources */,
 				77EC0DC52C232B56002FCB4F /* ViewControllerVendor.swift in Sources */,
 				77EC0DBA2C224F8C002FCB4F /* BaseNavigationController.swift in Sources */,
 				77EC0DB82C224F55002FCB4F /* RoutingController.swift in Sources */,
@@ -329,6 +340,7 @@
 				77EC0DB12C2234B9002FCB4F /* RootViewController.swift in Sources */,
 				77EC0D7F2C1B5ED1002FCB4F /* SceneDelegate.swift in Sources */,
 				77EC0DBE2C2250D2002FCB4F /* Global.swift in Sources */,
+				77EC0DCE2C23473B002FCB4F /* NavMenuComponent.swift in Sources */,
 				77EC0DC32C232A7C002FCB4F /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +692,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		77EC0DC82C23462F002FCB4F /* XCRemoteSwiftPackageReference "strada-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/strada-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -687,6 +707,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77EC0DAC2C1B5FD0002FCB4F /* XCRemoteSwiftPackageReference "turbo-ios" */;
 			productName = Turbo;
+		};
+		77EC0DC92C23462F002FCB4F /* Strada */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77EC0DC82C23462F002FCB4F /* XCRemoteSwiftPackageReference "strada-ios" */;
+			productName = Strada;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
