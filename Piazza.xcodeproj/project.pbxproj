@@ -14,6 +14,17 @@
 		77EC0D942C1B5ED2002FCB4F /* PiazzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D932C1B5ED2002FCB4F /* PiazzaTests.swift */; };
 		77EC0D9E2C1B5ED3002FCB4F /* PiazzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D9D2C1B5ED3002FCB4F /* PiazzaUITests.swift */; };
 		77EC0DA02C1B5ED3002FCB4F /* PiazzaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0D9F2C1B5ED3002FCB4F /* PiazzaUITestsLaunchTests.swift */; };
+		77EC0DAF2C2233C4002FCB4F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DAE2C2233C4002FCB4F /* Api.swift */; };
+		77EC0DB12C2234B9002FCB4F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DB02C2234B9002FCB4F /* RootViewController.swift */; };
+		77EC0DB42C224C66002FCB4F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77EC0DB22C224C66002FCB4F /* Localizable.strings */; };
+		77EC0DB82C224F55002FCB4F /* RoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DB72C224F55002FCB4F /* RoutingController.swift */; };
+		77EC0DBA2C224F8C002FCB4F /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DB92C224F8C002FCB4F /* BaseNavigationController.swift */; };
+		77EC0DBC2C225086002FCB4F /* path_configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = 77EC0DBB2C225086002FCB4F /* path_configuration.json */; };
+		77EC0DBE2C2250D2002FCB4F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DBD2C2250D2002FCB4F /* Global.swift */; };
+		77EC0DC12C225593002FCB4F /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = 77EC0DC02C225593002FCB4F /* Turbo */; };
+		77EC0DC32C232A7C002FCB4F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC22C232A7C002FCB4F /* WebViewController.swift */; };
+		77EC0DC52C232B56002FCB4F /* ViewControllerVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */; };
+		77EC0DC72C23389F002FCB4F /* PathDirectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0DC62C23389F002FCB4F /* PathDirectable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,16 @@
 		77EC0D992C1B5ED3002FCB4F /* PiazzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiazzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EC0D9D2C1B5ED3002FCB4F /* PiazzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiazzaUITests.swift; sourceTree = "<group>"; };
 		77EC0D9F2C1B5ED3002FCB4F /* PiazzaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiazzaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77EC0DAE2C2233C4002FCB4F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		77EC0DB02C2234B9002FCB4F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		77EC0DB32C224C66002FCB4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		77EC0DB72C224F55002FCB4F /* RoutingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingController.swift; sourceTree = "<group>"; };
+		77EC0DB92C224F8C002FCB4F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		77EC0DBB2C225086002FCB4F /* path_configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = path_configuration.json; sourceTree = "<group>"; };
+		77EC0DBD2C2250D2002FCB4F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		77EC0DC22C232A7C002FCB4F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVendor.swift; sourceTree = "<group>"; };
+		77EC0DC62C23389F002FCB4F /* PathDirectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDirectable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EC0DC12C225593002FCB4F /* Turbo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +101,7 @@
 				77EC0D922C1B5ED2002FCB4F /* PiazzaTests */,
 				77EC0D9C2C1B5ED3002FCB4F /* PiazzaUITests */,
 				77EC0D7A2C1B5ED1002FCB4F /* Products */,
+				77EC0DBF2C225593002FCB4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				77EC0D7C2C1B5ED1002FCB4F /* AppDelegate.swift */,
+				77EC0DB72C224F55002FCB4F /* RoutingController.swift */,
+				77EC0DC62C23389F002FCB4F /* PathDirectable.swift */,
+				77EC0DC22C232A7C002FCB4F /* WebViewController.swift */,
+				77EC0DC42C232B56002FCB4F /* ViewControllerVendor.swift */,
+				77EC0DB92C224F8C002FCB4F /* BaseNavigationController.swift */,
+				77EC0DBB2C225086002FCB4F /* path_configuration.json */,
+				77EC0DBD2C2250D2002FCB4F /* Global.swift */,
+				77EC0DAE2C2233C4002FCB4F /* Api.swift */,
+				77EC0DB02C2234B9002FCB4F /* RootViewController.swift */,
 				77EC0D7E2C1B5ED1002FCB4F /* SceneDelegate.swift */,
+				77EC0DB22C224C66002FCB4F /* Localizable.strings */,
 				77EC0D852C1B5ED2002FCB4F /* Assets.xcassets */,
 				77EC0D872C1B5ED2002FCB4F /* LaunchScreen.storyboard */,
 				77EC0D8A2C1B5ED2002FCB4F /* Info.plist */,
@@ -121,6 +154,13 @@
 			path = PiazzaUITests;
 			sourceTree = "<group>";
 		};
+		77EC0DBF2C225593002FCB4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +178,9 @@
 			dependencies = (
 			);
 			name = Piazza;
+			packageProductDependencies = (
+				77EC0DC02C225593002FCB4F /* Turbo */,
+			);
 			productName = Piazza;
 			productReference = 77EC0D792C1B5ED1002FCB4F /* Piazza.app */;
 			productType = "com.apple.product-type.application";
@@ -230,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77EC0D862C1B5ED2002FCB4F /* Assets.xcassets in Resources */,
+				77EC0DB42C224C66002FCB4F /* Localizable.strings in Resources */,
 				77EC0D892C1B5ED2002FCB4F /* Base in Resources */,
+				77EC0DBC2C225086002FCB4F /* path_configuration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EC0DAF2C2233C4002FCB4F /* Api.swift in Sources */,
 				77EC0D7D2C1B5ED1002FCB4F /* AppDelegate.swift in Sources */,
+				77EC0DC52C232B56002FCB4F /* ViewControllerVendor.swift in Sources */,
+				77EC0DBA2C224F8C002FCB4F /* BaseNavigationController.swift in Sources */,
+				77EC0DB82C224F55002FCB4F /* RoutingController.swift in Sources */,
+				77EC0DC72C23389F002FCB4F /* PathDirectable.swift in Sources */,
+				77EC0DB12C2234B9002FCB4F /* RootViewController.swift in Sources */,
 				77EC0D7F2C1B5ED1002FCB4F /* SceneDelegate.swift in Sources */,
+				77EC0DBE2C2250D2002FCB4F /* Global.swift in Sources */,
+				77EC0DC32C232A7C002FCB4F /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +372,14 @@
 				77EC0D882C1B5ED2002FCB4F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		77EC0DB22C224C66002FCB4F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77EC0DB32C224C66002FCB4F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -620,6 +681,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77EC0DC02C225593002FCB4F /* Turbo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77EC0DAC2C1B5FD0002FCB4F /* XCRemoteSwiftPackageReference "turbo-ios" */;
+			productName = Turbo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77EC0D712C1B5ED1002FCB4F /* Project object */;
 }
